@@ -10,11 +10,11 @@ function part2(dataSet) {
     console.log(`The solution of part 2 for ${dataSet} data is ${result}.`)
 }
 
+function fetchInput(dataSet) {
+    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim();
+}
+
 part1('test');
 part1('main');
 part2('test');
 part2('main');
-
-function fetchInput(dataSet) {
-    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim();
-}

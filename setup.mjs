@@ -1,12 +1,24 @@
+import * as dotenv from 'dotenv'
 import fs from 'fs';
 
-async function setup() {
-    let year = '2021';
-    let day = process.argv[2] || '1';
-    let token = '';
+dotenv.config();
 
-    if (isNaN(Number(day)) || Number(day) <= 0) {
-        throw new Error('Invalid argument: Argument must be a positive number.');
+async function setup() {
+    let year = Number(process.argv[2]);
+    let day = Number(process.argv[3]);
+    let token = process.env.token;
+
+    if (isNaN(year) || year <= 0) {
+        console.log(year);
+        throw new Error('Invalid argument: Year must be a positive number.');
+    }
+
+    if (isNaN(day) || day <= 0) {
+        throw new Error('Invalid argument: Day must be a positive number.');
+    }
+
+    if(fs.existsSync(`./${year}/${day}`)){
+        throw new Error(`Folder for day ${day} in ${year} already exists!`);
     }
 
     if (!fs.existsSync(`./${year}/${day}`)) {
