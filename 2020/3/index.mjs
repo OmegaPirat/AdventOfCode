@@ -1,6 +1,12 @@
 import fs from 'fs';
 
 function part1(dataSet) {
+    let field = fetchInput(dataSet).split('\n').map(it => {
+        it.split('');
+    });
+    let position = [0, 0];
+
+    
     let result = undefined;
     console.log(`The solution of part 1 for ${dataSet} data is ${result}.`)
 }
@@ -11,7 +17,7 @@ function part2(dataSet) {
 }
 
 function fetchInput(dataSet) {
-    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim().replace(/\r/g, '');
+    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim();
 }
 
 part1('test');

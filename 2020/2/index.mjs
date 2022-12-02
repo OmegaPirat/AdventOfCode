@@ -11,7 +11,7 @@ function part2(dataSet) {
 }
 
 function fetchInput(dataSet) {
-    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim().replace(/\r/g, '');
+    return fs.readFileSync(`./input-${dataSet}.dat`).toString().trim();
 }
 
 part1('test');

@@ -46,8 +46,8 @@ async function setup() {
 
 
     fs.writeFileSync(`./${year}/${day}/index.mjs`, initialIndexContent);
-    fs.writeFileSync(`./${year}/${day}/input-test.data`, '');
-    fs.writeFileSync(`./${year}/${day}/input-main.data`, input);
+    fs.writeFileSync(`./${year}/${day}/input-test.dat`, '');
+    fs.writeFileSync(`./${year}/${day}/input-main.dat`, input);
     fs.writeFileSync(`./${year}/${day}/README.md`, responseTaskBody);
 }
 
