@@ -8,9 +8,9 @@ function part1(dataSet) {
         let newScore = prev;
         let [opponent, player] = curr;
         if (player === config.win[opponent]) {
-            newScore += 6;
+            newScore += config.win.points;
         } else if (player === config.draw[opponent]) {
-            newScore += 3;
+            newScore += config.draw.points;
         }
         newScore += config.selectionPoints[player];
         return newScore;

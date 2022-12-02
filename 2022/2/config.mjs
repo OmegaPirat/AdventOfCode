@@ -1,18 +1,21 @@
 let part1Config = {
-    win: {
-        A: 'Y',
-        B: 'Z',
-        C: 'X',
+    lose: {
+        A: 'Z',
+        B: 'X',
+        C: 'Y',
+        points: 0,
     },
     draw: {
         A: 'X',
         B: 'Y',
         C: 'Z',
+        points: 3,
     },
-    lose: {
-        A: 'Z',
-        B: 'X',
-        C: 'Y',
+    win: {
+        A: 'Y',
+        B: 'Z',
+        C: 'X',
+        points: 6,
     },
     selectionPoints: {
         X: 1,
